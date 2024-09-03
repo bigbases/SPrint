@@ -1,3 +1,6 @@
+## the code is mostly taken from example_forgetting pytorch repo:
+# https://github.com/mtoneva/example_forgetting
+
 import numpy as np
 
 def compute_forgetting_statistics(diag_stats, npresentations):
