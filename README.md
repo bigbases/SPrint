@@ -1,4 +1,4 @@
-# **SPrint: Self-Paced Continual Learning with Forgettable Samples**<br>
+# **SPrint: Self-Paced Continual Learning with Adaptive Curriculum and Memory Replay**<br>
 <img width="842" alt="overview3" src="https://github.com/user-attachments/assets/34e7a3a4-683c-4f30-80c0-d159e8013095">
 
 ## Abstract
@@ -7,15 +7,13 @@ Continual learning addresses the challenge of learning new concepts progressivel
 ## Getting Started
 ### Requirements 
 
-- Python3
-- Pytorch (>1.0)
-- torchvision (>0.2)
-- numpy
-- pillow~=6.2.1
-- torch_optimizer
-- randaugment
-- easydict
-- pandas~=1.1.3
+- python==3.7.11
+- torch==1.10.0
+- numpy==1.21.2
+- torch_optimizer==0.3.0
+- randaugment==1.0.2
+- easydict==1.13
+- pandas==1.1.5
 
 ### Datasets
 All the datasets are saved in `dataset` directory by following formats as shown below.
@@ -47,8 +45,7 @@ For various experiments, you should know the role of each argument.
 
 - `MODE`: CIL methods. Our method is called `sprint`.
   (`joint` calculates accuracy when training all the datasets at once.)
-- `MEM_MANAGE`: Memory management method. `default` uses the memory method which the paper originally used.
-  [default, random, reservoir, uncertainty, prototype].
+- `MEM_MANAGE`: Memory management method. [default, random, reservoir, uncertainty, prototype].
 - `RND_SEED`: Random Seed Number 
 - `DATASET`: Dataset name [cifar10, cifar100, imagenet100]
 - `EXP`: Task setup [disjoint, blurry10]
@@ -75,3 +72,25 @@ In addition, you can also use the `tensorboard` as following command.
 ```angular2html
 tensorboard --logdir tensorboard
 ```
+
+## Acknowledgment and Modifications
+
+This project is based on the [Rainbow Memory](https://github.com/clovaai/rainbow-memory) project by Jihwan Bang, Heesu Kim, YoungJoon Yoo, Jung-Woo Ha, and Jonghyun Choi. We have made the following modifications to the original codebase:
+
+1. Implement our method in `methods/sprint.py`
+2. Add forgetting events computation algorithm in `utils/compute_forgetting.py`
+
+We express our gratitude to the original authors for their valuable work and insights in the field of continual learning.
+
+## License
+
+This project is licensed under the GNU General Public License v3.0, following the original Rainbow Memory project's license.
+
+As per the terms of the GPL-3.0 license, we acknowledge that this work is a derivative of the Rainbow Memory project. We have retained the copyright notice and license derived from the original project.
+
+For the original Rainbow Memory project, please refer to:
+- Project: [Rainbow Memory](https://github.com/clovaai/rainbow-memory)
+- Paper: [Rainbow Memory: Continual Learning with a Memory of Diverse Samples](https://openaccess.thecvf.com/content/CVPR2021/html/Bang_Rainbow_Memory_Continual_Learning_With_a_Memory_of_Diverse_Samples_CVPR_2021_paper.html)
+- License: [GNU General Public License v3.0](https://github.com/clovaai/rainbow-memory/blob/master/LICENSE)
+
+If you use this code for your research, please consider citing both our work and the Rainbow Memory paper:
