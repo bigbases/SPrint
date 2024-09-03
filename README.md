@@ -94,3 +94,13 @@ For the original Rainbow Memory project, please refer to:
 - License: [GNU General Public License v3.0](https://github.com/clovaai/rainbow-memory/blob/master/LICENSE)
 
 If you use this code for your research, please consider citing both our work and the Rainbow Memory paper:
+```angular2
+@InProceedings{Bang_2021_CVPR,
+    author    = {Bang, Jihwan and Kim, Heesu and Yoo, YoungJoon and Ha, Jung-Woo and Choi, Jonghyun},
+    title     = {Rainbow Memory: Continual Learning With a Memory of Diverse Samples},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2021},
+    pages     = {8218-8227}
+}
+```
