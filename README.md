@@ -1,5 +1,5 @@
 # **SPrint: Self-Paced Continual Learning with Adaptive Curriculum and Memory Replay**<br>
-<img width="842" alt="overview3" src="https://github.com/user-attachments/assets/34e7a3a4-683c-4f30-80c0-d159e8013095">
+<img width="781" alt="overview5" src="https://github.com/user-attachments/assets/81cba275-1876-48d2-8daa-06d66d506e9b">
 
 ## Abstract
 Continual learning addresses the challenge of learning new concepts progressively without forgetting previously acquired knowledge, a problem known as catastrophic forgetting. While existing methods have shown high performance on specific datasets or model architectures, they often lack generalizability across diverse learning scenarios. To overcome this limitation, we propose a novel continual learning method, which dynamically adjust the difficulty of both training samples and in-memory samples in a self-paced manner based on the model’s evolving learning capacity. We empirically demonstrate that SPrint robustly outperforms state-of-the-art methods despite its simplicity.
